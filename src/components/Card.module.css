@@ -1,5 +1,6 @@
 .card {
   font-family: Poppins;
+  padding-left: 45px;
 }
 .underpic {
   display: flex;
