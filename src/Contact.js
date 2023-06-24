@@ -1,17 +1,18 @@
 import styles from "./Contact.module.css";
-function Contact() {
+import React from "react";
+
+export default function Contact(props) {
+  console.log(props);
   return (
     <div className={styles.Contact}>
-      <img className={styles.pic} src="cat.png" alt="cat" />
-      <h1>Mr Wiskers</h1>
-      <div className={styles.logo}>
-        <p>Phone: 123456789</p>
-      </div>
-      <div className={styles.logo}>
-        <p>Email: mr.wiskers@catnio.meow</p>
+      <div>
+        <img className={styles.pic} src="cat.png" alt="cat" />
+        <div className={styles.info}>
+          <h1>{props.name}</h1>
+          <p>{props.phone}</p>
+          <p>{props.email}</p>
+        </div>
       </div>
     </div>
   );
 }
-
-export default Contact;
